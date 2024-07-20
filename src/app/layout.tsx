@@ -6,7 +6,15 @@ import { GeistSans } from "geist/font/sans";
 
 // TODO: have a trpc????
 // import { TRPCReactProvider } from "~/trpc/react";
-import { Footer, GlobalStyle, Link, Page, Paragraph, TopNav } from "govuk-react";
+import {
+  Details,
+  Footer,
+  GlobalStyle,
+  Link,
+  Page,
+  Paragraph,
+  TopNav,
+} from "govuk-react";
 
 // export const metadata: Metadata = {
 //   title: "Create T3 App",
@@ -43,10 +51,22 @@ export default function RootLayout({ children }: Readonly) {
         >
           {children}
         </Page>
-        <div className="flex h-screen" />
         <Footer>
           <Paragraph>Built by Sir Kieth Starmey</Paragraph>
-          <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">MoRe InFoRmAtIoNs</Link>
+          <Details summary="Legal disclaimer">
+            <Paragraph>
+              Terms and confitions apply, your first born child, your
+              mother&apos;s left kidney and your soul will be taken as payment.
+              Furthermore you will be required to work for 1000 years in the
+              afterlife. All rights reserved. Copyright 1066AD (c).
+            </Paragraph>
+            <Paragraph>
+              Incase you didn&apos;t get it, this is a joke. Please don&apos;t sue me.
+            </Paragraph>
+          </Details>
+          <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            MoRe InFoRmAtIoNs
+          </Link>
         </Footer>
       </body>
     </html>
