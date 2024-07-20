@@ -38,6 +38,7 @@ export const jobs = createTable(
     name: text("name", { length: 256 }),
     description: text("description"),
     userId: int("user_id", { mode: "number" }).notNull(),
+    location: text("location"),
     createdAt: int("created_at", { mode: "timestamp" })
       .default(sql`(unixepoch())`)
       .notNull(),
