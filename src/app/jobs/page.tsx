@@ -1,5 +1,12 @@
 "use client";
-import { Button, Caption, Details, Heading, Paragraph } from "govuk-react";
+import {
+  Button,
+  Caption,
+  Details,
+  Heading,
+  Paragraph,
+  SectionBreak,
+} from "govuk-react";
 
 export default function Page() {
   const jobs = [
@@ -29,12 +36,15 @@ export default function Page() {
             <Heading level={2}>{job.name}</Heading>
             <Details summary={job.description}>
               <>
-                <Paragraph children={`This job is in ${job.location}, it was posted at ${job.createdAt.toLocaleString()}`} />
+                <Paragraph
+                  children={`This job is in ${job.location}, it was posted at ${job.createdAt.toLocaleString()}`}
+                />
                 <Button as="a" href={`/jobs/${job.id}`}>
                   View job
                 </Button>
               </>
             </Details>
+            <SectionBreak />
           </li>
         ))}
       </ul>

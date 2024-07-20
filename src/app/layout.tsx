@@ -6,7 +6,7 @@ import { GeistSans } from "geist/font/sans";
 
 // TODO: have a trpc????
 // import { TRPCReactProvider } from "~/trpc/react";
-import { Footer, GlobalStyle, Link, Page, TopNav } from "govuk-react";
+import { Footer, GlobalStyle, Link, Page, Paragraph, TopNav } from "govuk-react";
 
 // export const metadata: Metadata = {
 //   title: "Create T3 App",
@@ -35,7 +35,7 @@ export default function RootLayout({ children }: Readonly) {
               <TopNav.NavLink as={Link} href="/jobs">
                 Jobs
               </TopNav.NavLink>
-              <TopNav.NavLink as={Link} href="/Profile">
+              <TopNav.NavLink as={Link} href="/profile">
                 My Profile
               </TopNav.NavLink>
             </TopNav>
@@ -44,7 +44,10 @@ export default function RootLayout({ children }: Readonly) {
           {children}
         </Page>
         <div className="flex h-screen" />
-        <Footer />
+        <Footer>
+          <Paragraph>Built by Sir Kieth Starmey</Paragraph>
+          <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">MoRe InFoRmAtIoNs</Link>
+        </Footer>
       </body>
     </html>
   );
