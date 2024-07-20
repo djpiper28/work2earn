@@ -61,7 +61,8 @@ export default function RootLayout({ children }: Readonly) {
               afterlife. All rights reserved. Copyright 1066AD (c).
             </Paragraph>
             <Paragraph>
-              Incase you didn&apos;t get it, this is a joke. Please don&apos;t sue me.
+              Incase you didn&apos;t get it, this is a joke. Please don&apos;t
+              sue me.
             </Paragraph>
           </Details>
           <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
