@@ -29,13 +29,13 @@ export default function RootLayout({ children }: Readonly) {
                 </TopNav.Anchor>
               }
             >
-              <TopNav.NavLink as={Link} to="/">
+              <TopNav.NavLink as={Link} href="/">
                 Home
               </TopNav.NavLink>
-              <TopNav.NavLink as={Link} to="/jobs">
+              <TopNav.NavLink as={Link} href="/jobs">
                 Jobs
               </TopNav.NavLink>
-              <TopNav.NavLink as={Link} to="/Profile">
+              <TopNav.NavLink as={Link} href="/Profile">
                 My Profile
               </TopNav.NavLink>
             </TopNav>
