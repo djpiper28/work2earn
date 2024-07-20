@@ -6,13 +6,7 @@ import { GeistSans } from "geist/font/sans";
 
 // TODO: have a trpc????
 // import { TRPCReactProvider } from "~/trpc/react";
-import {
-  Footer,
-  GlobalStyle,
-  Link,
-  Page,
-  TopNav,
-} from "govuk-react";
+import { Footer, GlobalStyle, Link, Page, TopNav } from "govuk-react";
 
 // export const metadata: Metadata = {
 //   title: "Create T3 App",
@@ -40,6 +34,9 @@ export default function RootLayout({ children }: Readonly) {
               </TopNav.NavLink>
               <TopNav.NavLink as={Link} to="/jobs">
                 Jobs
+              </TopNav.NavLink>
+              <TopNav.NavLink as={Link} to="/Profile">
+                My Profile
               </TopNav.NavLink>
             </TopNav>
           }
