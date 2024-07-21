@@ -25,8 +25,11 @@ const config = {
     ],
     "@typescript-eslint/no-unused-vars": [
       "warn",
+    ],
+    "@typescript-eslint/no-unsafe-assignment": [
+      "warn",
       {
-        "argsIgnorePattern": "^_"
+        "argsIgnorePattern": ".*"
       }
     ],
     "@typescript-eslint/require-await": "off",
