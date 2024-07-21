@@ -48,12 +48,10 @@ export default function Page() {
           </li>
         ))}
       </ul>
-      <Paragraph>
-        Cannot find a job you like?{" "}
-        <Button as="a" href="/post-job">
-          Post a job
-        </Button>
-      </Paragraph>
+      <Paragraph>Cannot find a job you like? </Paragraph>
+      <Button as="a" href="/post-job">
+        Post a job
+      </Button>
     </>
   );
 }
