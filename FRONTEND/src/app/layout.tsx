@@ -23,6 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Page
           header={
             <TopNav
+              company="NOT GOV.UK"
               serviceTitle={
                 <TopNav.Anchor as={Link} to="/">
                   {title}
