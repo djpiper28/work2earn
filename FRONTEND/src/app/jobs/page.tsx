@@ -16,6 +16,7 @@ export default function Page() {
       description: "I need someone to paint my house.",
       location: "London",
       createdAt: new Date(),
+      payment: "100000000000 DOT",
     },
     {
       id: 2,
@@ -23,7 +24,32 @@ export default function Page() {
       description: "I need someone to mow my lawn.",
       location: "Manchester",
       createdAt: new Date(),
+      payment: "2 DOT"
     },
+    {
+      id: 3,
+      name: "Clean my carpet",
+      description: "I spilt six pints of oil on it and now it is grim.",
+      location: "Liverpool",
+      createdAt: new Date(),
+      payment: "100000000000 DOT",
+    },
+    {
+      id: 4,
+      name: "Fix my bike",
+      description: "My bike has a flat tyre.",
+      location: "Birmingham",
+      createdAt: new Date(),
+      payment: "100000000000 DOT",
+    },
+    {
+      id: 5,
+      name: "Walk my dog",
+      description: "I am too lazy to walk my dog.",
+      location: "Leeds",
+      createdAt: new Date(),
+      payment: "0.000001 DOT",
+    }
   ];
 
   return (
@@ -37,7 +63,7 @@ export default function Page() {
             <Details summary={job.description}>
               <>
                 <Paragraph
-                  children={`This job is in ${job.location}, it was posted at ${job.createdAt.toLocaleString()}`}
+                  children={`This job is in ${job.location}, it was posted at ${job.createdAt.toLocaleString()}. You will be paid ${job.payment}.`}
                 />
                 <Button as="a" href={`/jobs/${job.id}`}>
                   View job
