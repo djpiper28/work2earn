@@ -1,10 +1,21 @@
 "use client";
-import{
-    Button, Details, Fieldset,  Heading,
-    Input,  Label,   LabelText, Paragraph, TextArea,
+import {
+  Button,
+  Details,
+  Fieldset,
+  Heading,
+  Input,
+  Label,
+  LabelText,
+  Paragraph,
+  TextArea,
 } from "govuk-react";
+import { useState } from "react";
 
 export default function Page() {
+  const [jobName, setJobName] = useState("");
+  const [jobLocation, setJobLocation] = useState("");
+  const [jobDescription, setJobDescription] = useState("");
   return (
     <>
       <Heading level={1}>Post a Job</Heading>
@@ -27,21 +38,33 @@ export default function Page() {
       <Fieldset>
         <Label>
           <LabelText name="job-name">Job name</LabelText>
-          <Input name="job-name" />
+          <Input
+            name="job-name"
+            value={jobName}
+            onChange={(e) => setJobName(e.target.value)}
+            error={jobName.length === 0}
+          />
         </Label>
-            <TextArea
-              mb={8}
-              hint="For example: I need someone to paint my house."
-              input={{
-                value: "",
-                name: 'description',
-              }}
-            >
-              Description of what you saw
-            </TextArea>
+        <TextArea
+          mb={8}
+          hint="For example: I need someone to paint my house."
+          input={{
+            onChange: (e) => setJobDescription(e.target.value),
+            value: jobDescription,
+            name: "description",
+          }}
+          error={jobDescription.length === 0}
+        >
+          Description of what you need
+        </TextArea>
         <Label>
           <LabelText name="job-location">Job location</LabelText>
-          <Input name="job-location" />
+          <Input
+            name="job-location"
+            value={jobLocation}
+            onChange={(e) => setJobLocation(e.target.value)}
+            error={jobLocation.length === 0}
+          />
         </Label>
       </Fieldset>
       <Button type="submit">Post job</Button>

@@ -14,7 +14,7 @@ export default function Home() {
       <Heading level={1}>Work 2 Earn</Heading>
       <Paragraph>
         Work 2 Earn is a platform that connects people who need help with people
-        who can help.
+        who can help. It is funded by the department of levelling down.
       </Paragraph>
       <Paragraph>
         By using the Polkadot blockchain, we can ensure that workers and
