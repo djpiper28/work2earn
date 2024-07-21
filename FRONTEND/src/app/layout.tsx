@@ -12,8 +12,9 @@ import {
   Paragraph,
   TopNav,
 } from "govuk-react";
+import { ReactNode } from "react";
 
-export default function RootLayout({ children }: Readonly) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   const title = "Work 2 Earn";
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
